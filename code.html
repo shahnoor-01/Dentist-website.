@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width,initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html, body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+<!-- STITCH_THREEJS_START:ANIMATION_8 class="fixed inset-0 w-full h-full bg-transparent" -->
+<div class="fixed inset-0 w-full h-full bg-transparent" style="display:block;">
+<script src="https://ajax.googleapis.com/ajax/libs/threejs/r125/three.min.js"></script>
+<div id="threejs-container-ANIMATION_8" style="width:100%;height:100%"></div>
+<script>
+(function() {
+  const container = document.getElementById('threejs-container-ANIMATION_8');
+  const devicePixelRatio = window.devicePixelRatio || 1;
+  # Vercel Deployment Package: Vakratund Multispeciality Dental Clinic
+
+Deploy this complete luxury 3D dental clinic website directly to Vercel.
+
+---
+
+### Folder Structure for Vercel
+```
+vakratund-clinic/
+├── index.html        (The complete production website code below)
+├── vercel.json       (Configuration file)
+└── README.md
+```
+
+---
+
+### File 1: `vercel.json`
+```json
+{
+  "version": 2,
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "DENY" },
+        { "key": "X-XSS-Protection", "value": "1; mode=block" }
+      ]
+    }
+  ]
+}
+```
+
+---
+
+### File 2: `index.html` (Full Standalone Production Code)
+```html
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Vakratund Multispeciality Dental Clinic | Precision Dentistry &amp; Implantology Colaba</title>
+  <meta name="description" content="Precision dentistry and surgical artistry in Colaba, South Mumbai. World-class painless surgical procedures, micro-endodontics, digital smile designing, and hospital-grade sterilization."/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <script src="https://cdn.tailwindcss.com"></script>
+<script src="https://unpkg.com/lucide@latest"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+            syne: ['Syne', 'sans-serif'],
+          },
+          colors: {
+            surface: {
+              DEFAULT: '#0e131f',
+              dim: '#080e1a',
+              bright: '#161c28',
+              card: 'rgba(14, 19, 31, 0.72)',
+              glass: 'rgba(255, 255, 255, 0.03)',
+            },
+            silver: {
+              100: '#f8fafc',
+              200: '#e2e8f0',
+              300: '#cbd5e1',
+              400: '#94a3b8',
+            },
+            accent: {
+              cyan: '#38bdf8',
+              glow: '#0284c7'
+            }
+          }
+        }
+      }
+    }
+  </script>
+<style>
+    body {
+      background-color: #080e1a;
+      color: #f8fafc;
+      overflow-x: hidden;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+    }
+    .glass-card {
+      background: rgba(14, 19, 31, 0.65);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+    .glass-card:hover {
+      border-color: rgba(56, 189, 248, 0.35);
+      box-shadow: 0 12px 40px -10px rgba(56, 189, 248, 0.15);
+    }
+    .text-glow {
+      text-shadow: 0 0 28px rgba(56, 189, 248, 0.35);
+    }
+  </style>
+
+<body class="relative min-h-screen selection:bg-accent-cyan selection:text-black">
+<div class="fixed inset-0 pointer-events-none -z-10" id="three-canvas-container"></div>
+<header class="fixed top-0 inset-x-0 z-50 transition-all duration-300">
+<div class="max-w-7xl mx-auto px-6 py-4">
+<nav class="glass-card rounded-full px-6 py-3 flex items-center justify-between shadow-2xl border border-white/10">
+<a class="flex items-center gap-3" href="#hero">
+<div class="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center p-2 shadow-lg shadow-sky-500/20">
+<i class="w-5 h-5 text-white" data-lucide="shield-plus"></i>
+</div>
+<div>
+<span class="font-syne font-bold tracking-wider text-base text-white block leading-tight">VAKRATUND</span>
+<span class="text-[9px] tracking-[0.2em] text-slate-400 block uppercase">Multispeciality Dental</span>
+</div>
+</a>
+<div class="hidden md:flex items-center gap-7 text-xs font-medium uppercase tracking-wider text-slate-300">
+<a class="hover:text-accent-cyan transition-colors" href="#doctors">Doctors</a>
+<a class="hover:text-accent-cyan transition-colors" href="#gallery">Clinic Gallery</a>
+<a class="hover:text-accent-cyan transition-colors" href="#specialities">Specialities</a>
+<a class="hover:text-accent-cyan transition-colors" href="#why-us">Why Us</a>
+<a class="hover:text-accent-cyan transition-colors" href="#schedule">Timings &amp; Location</a>
+<a class="hover:text-accent-cyan transition-colors" href="#reviews">Reviews</a>
+</div>
+<div class="flex items-center gap-4">
+<div class="hidden lg:flex items-center gap-2 text-xs text-emerald-400 bg-emerald-950/40 border border-emerald-500/30 px-3 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            Open Today • Colaba
+          </div>
+<a class="px-5 py-2 rounded-full bg-white text-slate-900 font-semibold text-xs tracking-wide hover:bg-slate-200 transition-all shadow-lg hover:shadow-white/20 flex items-center gap-1.5" href="#appointment">
+            Book Visit <i class="w-3.5 h-3.5" data-lucide="chevron-right"></i>
+</a>
+</div>
+</nav>
+</div>
+</header>
+<section class="relative pt-36 pb-24 md:pt-44 md:pb-32 px-6" id="hero">
+<div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-7 space-y-7">
+<div class="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/5 border border-white/10 text-xs font-medium text-slate-300">
+<span class="w-2 h-2 rounded-full bg-accent-cyan"></span>
+          Precision Dentistry • Colaba, Mumbai
+        </div>
+<h1 class="font-syne text-4xl sm:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight text-white">
+          Redefining <br/>
+<span class="bg-gradient-to-r from-white via-slate-200 to-sky-300 bg-clip-text text-transparent">Dental Artistry</span> <br/>
+          with Surgical Precision.
+        </h1>
+<p class="text-base sm:text-lg text-slate-400 font-normal max-w-xl leading-relaxed">
+          Welcome to <strong class="text-slate-200 font-medium">Vakratund Multispeciality Dental Clinic</strong>. Featuring world-class painless surgical procedures, micro-endodontics, digital smile designing, and hospital-grade sterilization in the heart of South Mumbai.
+        </p>
+<div class="flex flex-wrap items-center gap-4 pt-2">
+<a class="px-7 py-3.5 rounded-xl bg-white text-slate-900 font-semibold text-sm hover:bg-slate-200 transition-all shadow-xl hover:shadow-white/10 flex items-center gap-2" href="#appointment">
+<i class="w-4 h-4" data-lucide="calendar"></i> Book Appointment
+          </a>
+<a class="px-7 py-3.5 rounded-xl glass-card text-white font-medium text-sm hover:border-sky-400/50 transition-all flex items-center gap-2" href="https://maps.app.goo.gl/D9atAmbZqpgvK3496?g_st=ac" rel="noopener noreferrer" target="_blank">
+<i class="w-4 h-4 text-sky-400" data-lucide="compass"></i> Get Directions
+          </a>
+</div>
+<div class="grid grid-cols-3 gap-6 pt-6 border-t border-white/10 max-w-lg">
+<div>
+<div class="font-syne text-2xl sm:text-3xl font-bold text-white">15+</div>
+<div class="text-xs text-slate-400 mt-0.5">Years Experience</div>
+</div>
+<div>
+<div class="font-syne text-2xl sm:text-3xl font-bold text-white">12,000+</div>
+<div class="text-xs text-slate-400 mt-0.5">Restored Smiles</div>
+</div>
+<div>
+<div class="font-syne text-2xl sm:text-3xl font-bold text-white flex items-center gap-1">
+              4.9 <i class="w-4 h-4 text-amber-400 fill-amber-400" data-lucide="star"></i>
+</div>
+<div class="text-xs text-slate-400 mt-0.5">Google Verified</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 flex justify-center">
+<div class="relative w-full max-w-md">
+<div class="absolute -inset-1.5 rounded-3xl bg-gradient-to-b from-sky-500/20 to-indigo-500/0 blur-xl"></div>
+<div class="relative glass-card rounded-3xl p-6 overflow-hidden border border-white/15">
+<div class="relative aspect-[4/5] rounded-2xl overflow-hidden bg-slate-900 mb-5">
+<img alt="Dr. Pramod Andhale" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/20 to-transparent"></div>
+<div class="absolute bottom-4 left-4 right-4">
+<span class="inline-block px-2.5 py-1 rounded bg-sky-500/20 border border-sky-400/30 text-[10px] uppercase font-bold tracking-widest text-sky-300 mb-1.5">
+                  Lead Surgeon
+                </span>
+<h3 class="font-syne text-xl font-bold text-white">Dr. Pramod Andhale</h3>
+<p class="text-xs text-slate-300">B.D.S. • Senior Dental Surgeon</p>
+<p class="text-[11px] text-slate-400 mt-1">Expertise: Dental Implants, Full-Mouth Rehab &amp; Surgery</p>
+</div>
+</div>
+<div class="flex items-center justify-between text-xs text-slate-400 px-1 pt-1 border-t border-white/5">
+<span class="flex items-center gap-1.5"><span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Modern Operatory</span>
+<span>Colaba Branch</span>
+<span class="text-sky-300">Accepting Patients</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="doctors">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-3">
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">Surgical Artistry &amp; Compassion</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white">Meet Your Dental Specialists</h2>
+<p class="text-sm text-slate-400">Led by experienced dental surgeons dedicated to preserving your natural oral harmony using modern microscopic dentistry and painless techniques.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+<div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 group">
+<div>
+<div class="flex items-start gap-5 mb-5">
+<div class="w-24 h-28 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 shrink-0">
+<img alt="Dr. Pramod Andhale" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-sky-400">Senior Dental Surgeon</span>
+<h3 class="font-syne text-xl font-bold text-white mt-0.5">Dr. Pramod Andhale</h3>
+<p class="text-xs text-slate-400 font-medium">B.D.S. (Dental Surgeon)</p>
+<p class="text-xs text-slate-300 mt-2 line-clamp-3">Over 15 years of dedicated surgical practice in South Mumbai. Known for microscopic root canal therapies, aesthetic full-arch dental implants, and atraumatic surgical restorations.</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2.5 py-4 my-2 border-y border-white/5 text-center text-xs">
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Implantology</div>
+<div class="text-[10px] text-slate-500">Certified</div>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Micro-Endo</div>
+<div class="text-[10px] text-slate-500">Specialist</div>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Oral Surgery</div>
+<div class="text-[10px] text-slate-500">Advanced</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div class="text-xs text-slate-400 space-y-0.5">
+<div class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-sky-400" data-lucide="phone"></i> +91 98210 58974</div>
+<div class="text-[11px] text-slate-500">dr.pramodhale@gmail.com</div>
+</div>
+<a class="px-4 py-2 rounded-xl bg-white/10 hover:bg-white/20 text-xs font-semibold text-white transition-colors" href="tel:+919821058974">
+              Call Dr. Pramod
+            </a>
+</div>
+</div>
+<div class="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-between transition-all duration-300 group">
+<div>
+<div class="flex items-start gap-5 mb-5">
+<div class="w-24 h-28 rounded-2xl overflow-hidden bg-slate-900 border border-white/10 shrink-0">
+<img alt="Dr. Vidhya Andhale" class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1594824813583-050f2495b8d2?q=80&amp;w=800&amp;auto=format&amp;fit=crop"/>
+</div>
+<div>
+<span class="text-[10px] uppercase font-bold tracking-wider text-pink-400">Aesthetic Dental Specialist</span>
+<h3 class="font-syne text-xl font-bold text-white mt-0.5">Dr. Vidhya Andhale</h3>
+<p class="text-xs text-slate-400 font-medium">B.D.S. (Dental Surgeon)</p>
+<p class="text-xs text-slate-300 mt-2 line-clamp-3">Passionate dental cosmetic expert focusing on smile designing, composite veneers, gentle preventive procedures, and pediatric oral health care in a calm, stress-free setting.</p>
+</div>
+</div>
+<div class="grid grid-cols-3 gap-2.5 py-4 my-2 border-y border-white/5 text-center text-xs">
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Smile Design</div>
+<div class="text-[10px] text-slate-500">Aesthetics</div>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Pediatric</div>
+<div class="text-[10px] text-slate-500">Gentle Care</div>
+</div>
+<div class="p-2 rounded-xl bg-white/[0.02]">
+<div class="font-semibold text-slate-200">Restorative</div>
+<div class="text-[10px] text-slate-500">Biomimetic</div>
+</div>
+</div>
+</div>
+<div class="flex items-center justify-between pt-4 mt-2">
+<div class="text-xs text-slate-400 space-y-0.5">
+<div class="flex items-center gap-1.5"><i class="w-3.5 h-3.5 text-pink-400" data-lucide="phone"></i> +91 98210 58974</div>
+<div class="text-[11px] text-slate-500">Vakratund Dental Colaba</div>
+</div>
+<a class="px-4 py-2 rounded-xl bg-white text-slate-900 hover:bg-slate-200 text-xs font-semibold transition-colors flex items-center gap-1" href="#appointment">
+              Book with Dr. Vidhya <i class="w-3.5 h-3.5" data-lucide="arrow-right"></i>
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="gallery">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
+<div>
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">State-Of-The-Art Architecture</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white mt-1">Our Colaba Operatory &amp; Lounge</h2>
+</div>
+<p class="text-sm text-slate-400 max-w-md">Step into a soothing clinical atmosphere designed with sterile surgical precision, ergonomic memory-foam dental suites, and comforting warm accents.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-6">
+<div class="md:col-span-7 group relative rounded-3xl overflow-hidden glass-card border border-white/10 aspect-[16/10]">
+<img alt="Dental Operatory Suite" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-[10px] uppercase font-bold tracking-widest text-sky-400">Surgical Suite • HEPA Sterilized</span>
+<h3 class="font-syne text-xl font-bold text-white mt-1">Ergonomic Precision Dental Suite</h3>
+<p class="text-xs text-slate-300 mt-1 max-w-lg">Equipped with micro-endodontic operating optics, low-dose digital sensors, high-definition intra-oral cameras, and ambient warm lighting for maximum patient tranquility.</p>
+</div>
+</div>
+<div class="md:col-span-5 group relative rounded-3xl overflow-hidden glass-card border border-white/10 aspect-[16/10] md:aspect-auto">
+<img alt="Consultation &amp; Waiting Lounge" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&amp;w=1200&amp;auto=format&amp;fit=crop"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent"></div>
+<div class="absolute bottom-6 left-6 right-6">
+<span class="text-[10px] uppercase font-bold tracking-widest text-amber-400">Consultation Lounge</span>
+<h3 class="font-syne text-xl font-bold text-white mt-1">Private Consultation &amp; Lounge</h3>
+<p class="text-xs text-slate-300 mt-1">Refined acoustic privacy, frosted safety glass, and comfortable seating designed to eliminate dental anxiety from the moment you step inside.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="why-us">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">The Vakratund Standard</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white">Engineered for Perfection</h2>
+<p class="text-sm text-slate-400">Why families, professionals, and international visitors in South Mumbai trust us with their smiles.</p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<div class="glass-card rounded-2xl p-6 space-y-3 transition-transform duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
+<i class="w-6 h-6" data-lucide="cpu"></i>
+</div>
+<h3 class="font-syne font-bold text-base text-white">Advanced Equipment</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Ultra-low radiation digital dental radiography and 3D intraoral imaging guarantee microscopic diagnostic precision.</p>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-3 transition-transform duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
+<i class="w-6 h-6" data-lucide="user-check"></i>
+</div>
+<h3 class="font-syne font-bold text-base text-white">Experienced Surgeons</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Over 15 years of surgical excellence with thousands of successful root canals, implants, and complex reconstructions.</p>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-3 transition-transform duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
+<i class="w-6 h-6" data-lucide="shield-check"></i>
+</div>
+<h3 class="font-syne font-bold text-base text-white">Gentle &amp; Painless</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Modern localized anesthesia techniques and comforting pacing ensure zero stress, anxiety, or pain during all treatments.</p>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-3 transition-transform duration-300 hover:-translate-y-1">
+<div class="w-12 h-12 rounded-xl bg-sky-500/10 border border-sky-400/20 flex items-center justify-center text-sky-400">
+<i class="w-6 h-6" data-lucide="heart-handshake"></i>
+</div>
+<h3 class="font-syne font-bold text-base text-white">Bespoke Patient Care</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Transparent consultations, honest pricing, and tailored treatment plans designed specifically around your smile goals.</p>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="specialities">
+<div class="max-w-7xl mx-auto">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-4">
+<div>
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">Clinical Specialities</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white mt-1">Full-Spectrum Dental Solutions</h2>
+</div>
+<a class="text-xs font-semibold text-sky-400 hover:text-sky-300 flex items-center gap-1" href="#appointment">
+          SCHEDULE AN ASSESSMENT <i class="w-4 h-4" data-lucide="arrow-right"></i>
+</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="scan"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Comprehensive Digital Checkup</h3>
+<p class="text-xs text-slate-400 leading-relaxed">High-resolution intraoral video scanning, low-dose digital X-rays, and comprehensive periodontal evaluation to detect microscopic anomalies early.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Preventive Care</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="activity"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Precision Root Canal Therapy</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Single-sitting, pain-free endodontic therapy using rotary nickel-titanium instruments and apex locators to preserve and heal infected teeth.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Single Visit Available</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="sparkles"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Ultrasonic Scaling &amp; Polishing</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Gentle piezoelectric scaling that lifts stubborn calculus, tartar, and coffee/tobacco stains without harming the fragile tooth enamel.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Enamel-Safe Glow</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="alert-circle"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Gentle Wisdom Tooth Surgery</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Minimally invasive impacted tooth extractions executed with sterile surgical precision for rapid healing and minimal post-op swelling.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Atraumatic Removal</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="layers"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Composite Fillings &amp; Inlays</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Tooth-colored biomimetic nanofill resins that bond seamlessly to tooth structure, reproducing natural translucency and supreme chew resilience.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Natural Shade Match</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4 group">
+<div class="w-10 h-10 rounded-lg bg-sky-500/10 flex items-center justify-center text-sky-400 group-hover:scale-110 transition-transform">
+<i class="w-5 h-5" data-lucide="smile"></i>
+</div>
+<h3 class="font-syne font-bold text-lg text-white">Cosmetic Smile Designing</h3>
+<p class="text-xs text-slate-400 leading-relaxed">Handcrafted porcelain veneers, tooth contouring, and medical-grade laser teeth whitening engineered to enhance your facial balance.</p>
+<div class="pt-2 flex items-center justify-between text-[11px] text-slate-500 border-t border-white/5">
+<span>Bespoke Makeover</span>
+<span class="text-sky-400">Learn More</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="schedule">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">Convenient Schedule</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white">Colaba Clinic Hours &amp; Details</h2>
+<p class="text-sm text-slate-400">Flexible morning and evening appointments accommodating busy professionals and family routines.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
+<div class="lg:col-span-5 space-y-6">
+<div class="glass-card rounded-3xl p-6 sm:p-8 space-y-6">
+<h3 class="font-syne text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+<i class="w-4 h-4 text-sky-400" data-lucide="clock"></i> Daily Consultation Hours
+            </h3>
+<div class="space-y-3">
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs sm:text-sm">
+<span class="text-slate-300 font-medium">Morning Consultation</span>
+<span class="font-syne font-bold text-sky-300">10:00 AM – 2:00 PM</span>
+</div>
+<div class="flex items-center justify-between p-3.5 rounded-xl bg-white/[0.02] border border-white/5 text-xs sm:text-sm">
+<span class="text-slate-300 font-medium">Evening Consultation</span>
+<span class="font-syne font-bold text-sky-300">5:00 PM – 10:00 PM</span>
+</div>
+</div>
+<p class="text-[11px] text-slate-500 italic">* Prior telephonic or online reservation recommended to ensure zero wait time.</p>
+</div>
+<div class="glass-card rounded-3xl p-6 sm:p-8 space-y-4">
+<h3 class="font-syne text-sm font-bold text-slate-300 uppercase tracking-wider flex items-center gap-2">
+<i class="w-4 h-4 text-sky-400" data-lucide="map-pin"></i> Clinic Address
+            </h3>
+<p class="text-xs sm:text-sm text-slate-300 leading-relaxed font-normal">
+              4 Gala House, Rajwadkar Street, Ganesh Lane, Ground Floor, Shop No.10, Colaba, Mumbai – 400005.
+            </p>
+<div class="pt-2 text-xs text-slate-400 space-y-1">
+<div><strong>Tel:</strong> 022 2284 3145</div>
+<div><strong>Mob:</strong> +91 98210 58974</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 glass-card rounded-3xl overflow-hidden relative min-h-[380px] border border-white/10 flex flex-col justify-end p-6">
+<iframe allowfullscreen="" class="absolute inset-0 w-full h-full border-0 filter invert contrast-125 opacity-70" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.22557762692!2d72.8252277!3d18.9196726!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7d1ea21b06655%3A0xe54ef6e6dfc7ea8f!2sVakratund%20Multispeciality%20Dental%20Clinic!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin">
+</iframe>
+<div class="relative z-10 glass-card rounded-2xl p-4 max-w-sm border border-white/15 flex items-center justify-between gap-4">
+<div>
+<div class="font-syne font-bold text-xs text-white">Vakratund Dental Clinic</div>
+<div class="text-[10px] text-slate-400">Shop No. 10, Ganesh Lane, Colaba</div>
+</div>
+<a class="px-3.5 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-slate-950 font-bold text-xs transition-colors shrink-0" href="https://maps.app.goo.gl/D9atAmbZqpgvK3496?g_st=ac" rel="noopener noreferrer" target="_blank">
+              Directions
+            </a>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="reviews">
+<div class="max-w-7xl mx-auto">
+<div class="text-center max-w-2xl mx-auto mb-16 space-y-2">
+<span class="text-xs font-semibold tracking-widest uppercase text-sky-400">Verified Patient Stories</span>
+<h2 class="font-syne text-3xl sm:text-4xl font-bold text-white">Smiles We Have Transformed</h2>
+<div class="flex items-center justify-center gap-1 text-amber-400 pt-1">
+<i class="w-4 h-4 fill-amber-400" data-lucide="star"></i>
+<i class="w-4 h-4 fill-amber-400" data-lucide="star"></i>
+<i class="w-4 h-4 fill-amber-400" data-lucide="star"></i>
+<i class="w-4 h-4 fill-amber-400" data-lucide="star"></i>
+<i class="w-4 h-4 fill-amber-400" data-lucide="star"></i>
+<span class="text-xs text-slate-400 ml-2 font-sans font-medium">4.9/5.0 Star Rating on Google</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="glass-card rounded-2xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-400"><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i></div>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/20">Google Verified</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed italic">"Dr. Pramod Andhale is exceptionally gentle. I used to have severe dental phobia, but my root canal treatment was virtually painless. The clinic in Colaba is spotlessly clean and modern."</p>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-8 h-8 rounded-full bg-sky-500/20 text-sky-400 flex items-center justify-center font-bold text-xs">RK</div>
+<div>
+<div class="font-syne font-bold text-xs text-white">Rahul Kulkarni</div>
+<div class="text-[10px] text-slate-400">Colaba Resident • RCT Treatment</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-400"><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i></div>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/20">Google Verified</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed italic">"Dr. Vidhya did my aesthetic smile alignment and composite veneers. The attention to detail is remarkable. My teeth look naturally brilliant and healthy! Highly recommended."</p>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-8 h-8 rounded-full bg-pink-500/20 text-pink-400 flex items-center justify-center font-bold text-xs">SM</div>
+<div>
+<div class="font-syne font-bold text-white text-xs">Sneha Merchant</div>
+<div class="text-[10px] text-slate-400">Cosmetic Veneers Patient</div>
+</div>
+</div>
+</div>
+<div class="glass-card rounded-2xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<div class="flex text-amber-400"><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i><i class="w-3.5 h-3.5 fill-amber-400" data-lucide="star"></i></div>
+<span class="text-[10px] text-emerald-400 bg-emerald-950/40 px-2 py-0.5 rounded border border-emerald-500/20">Google Verified</span>
+</div>
+<p class="text-xs text-slate-300 leading-relaxed italic">"Honest advice and reasonable charges in South Mumbai. They explained every step with digital imaging before starting the procedure. The waiting area and suite are top-notch."</p>
+<div class="flex items-center gap-3 pt-2">
+<div class="w-8 h-8 rounded-full bg-emerald-500/20 text-emerald-400 flex items-center justify-center font-bold text-xs">AD</div>
+<div>
+<div class="font-syne font-bold text-white text-xs">Aditya D.</div>
+<div class="text-[10px] text-slate-400">Cleaning &amp; Restoration</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="py-24 px-6 relative" id="appointment">
+<div class="max-w-5xl mx-auto">
+<div class="glass-card rounded-3xl p-8 sm:p-14 text-center border border-white/20 relative overflow-hidden">
+<div class="max-w-2xl mx-auto space-y-4">
+<span class="px-3.5 py-1.5 rounded-full bg-sky-500/10 border border-sky-400/30 text-xs font-semibold text-sky-400 uppercase tracking-widest inline-block">Priority Reservations</span>
+<h2 class="font-syne text-3xl sm:text-5xl font-bold text-white">
+            Ready for Your <br/><span class="bg-gradient-to-r from-sky-300 via-white to-sky-200 bg-clip-text text-transparent">Signature Healthy Smile?</span>
+</h2>
+<p class="text-sm text-slate-300 max-w-lg mx-auto">
+            Schedule your personalized consultation with Dr. Pramod Andhale &amp; Dr. Vidhya Andhale at Vakratund Multispeciality Dental Clinic, Colaba.
+          </p>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 max-w-2xl mx-auto">
+<a class="p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex flex-col items-center gap-1.5 transition-all group" href="tel:+919821058974">
+<i class="w-5 h-5 text-sky-400 group-hover:scale-110 transition-transform" data-lucide="phone"></i>
+<span class="text-xs font-bold text-white">Call Mobile</span>
+<span class="text-[10px] text-slate-400">+91 98210 58974</span>
+</a>
+<a class="p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex flex-col items-center gap-1.5 transition-all group" href="tel:02222843145">
+<i class="w-5 h-5 text-slate-300 group-hover:scale-110 transition-transform" data-lucide="phone-call"></i>
+<span class="text-xs font-bold text-white">Landline</span>
+<span class="text-[10px] text-slate-400">022 2284 3145</span>
+</a>
+<a class="p-3.5 rounded-xl bg-emerald-950/30 hover:bg-emerald-900/40 border border-emerald-500/30 flex flex-col items-center gap-1.5 transition-all group" href="https://wa.me/919821058974?text=Hello%20Vakratund%20Dental%20Clinic,%20I%20would%20like%20to%20book%20an%20appointment." rel="noopener noreferrer" target="_blank">
+<i class="w-5 h-5 text-emerald-400 group-hover:scale-110 transition-transform" data-lucide="message-square"></i>
+<span class="text-xs font-bold text-emerald-300">WhatsApp</span>
+<span class="text-[10px] text-emerald-400/80">Chat Instantly</span>
+</a>
+<a class="p-3.5 rounded-xl bg-white/5 hover:bg-white/10 border border-white/10 flex flex-col items-center gap-1.5 transition-all group" href="mailto:dr.pramodhale@gmail.com?subject=Dental%20Consultation%20Inquiry">
+<i class="w-5 h-5 text-sky-400 group-hover:scale-110 transition-transform" data-lucide="mail"></i>
+<span class="text-xs font-bold text-white">Email Desk</span>
+<span class="text-[10px] text-slate-400">Send Enquiry</span>
+</a>
+</div>
+<div class="pt-6 text-xs text-slate-400 flex items-center justify-center gap-2">
+<i class="w-3.5 h-3.5 text-sky-400" data-lucide="map-pin"></i>
+            4 Gala House, Rajwadkar Street, Colaba, Mumbai – 400005
+          </div>
+</div>
+</div>
+</div>
+</section>
+<footer class="border-t border-white/10 bg-slate-950/80 pt-16 pb-12 px-6">
+<div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/5">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 to-indigo-600 flex items-center justify-center p-1.5">
+<i class="w-4 h-4 text-white" data-lucide="shield-plus"></i>
+</div>
+<div>
+<span class="font-syne font-bold tracking-wider text-sm text-white block">VAKRATUND</span>
+<span class="text-[8px] tracking-[0.2em] text-slate-400 block uppercase">Multispeciality Dental</span>
+</div>
+</div>
+<p class="text-xs text-slate-400 leading-relaxed">Setting the standard for modern microscopic restorative and aesthetic dentistry in South Mumbai. Committed to hospital-grade sterilization and genuine gentle patient treatment.</p>
+<div class="text-xs text-emerald-400 flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-emerald-400"></span> Open Daily: 10:00 AM – 2:00 PM &amp; 5:00 PM – 10:00 PM
+        </div>
+</div>
+<div>
+<h4 class="font-syne font-bold text-xs uppercase tracking-wider text-white mb-4">Quick Links</h4>
+<ul class="space-y-2 text-xs text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#hero">Home</a></li>
+<li><a class="hover:text-white transition-colors" href="#doctors">Doctors Profile</a></li>
+<li><a class="hover:text-white transition-colors" href="#gallery">Clinic Tour</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialities">Dental Services</a></li>
+<li><a class="hover:text-white transition-colors" href="#why-us">Why Choose Us</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-syne font-bold text-xs uppercase tracking-wider text-white mb-4">Treatments</h4>
+<ul class="space-y-2 text-xs text-slate-400">
+<li><a class="hover:text-white transition-colors" href="#specialities">Dental Implants &amp; Surgery</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialities">Microscopic Root Canal Therapy</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialities">Cosmetic Porcelain Veneers</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialities">Laser Teeth Whitening</a></li>
+<li><a class="hover:text-white transition-colors" href="#specialities">Ultrasonic Scaling &amp; Cleanings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-syne font-bold text-xs uppercase tracking-wider text-white mb-4">Clinic Contact</h4>
+<div class="space-y-2 text-xs text-slate-400">
+<p class="leading-relaxed">4 Gala House, Rajwadkar St, Ganesh Lane, Shop No. 10, Colaba, Mumbai – 400005</p>
+<p><strong>Phone:</strong> +91 98210 58974</p>
+<p><strong>Clinic:</strong> Tel: 022 2284 3145</p>
+<p><strong>Email:</strong> dr.pramodhale@gmail.com</p>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-slate-500 gap-4">
+<div>© 2026 Vakratund Multispeciality Dental Clinic. All Rights Reserved.</div>
+<div class="flex gap-6">
+<a class="hover:text-slate-400" href="https://maps.app.goo.gl/D9atAmbZqpgvK3496?g_st=ac" target="_blank">Google Maps Verification</a>
+<span>•</span>
+<span>Emergency Dental Colaba</span>
+</div>
+</div>
+</footer>
+<script>
+    lucide.createIcons();
+  </script>
+<script>
+    (function init3D() {
+      const container = document.getElementById('three-canvas-container');
+      if (!container) return;
+
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(60, window.innerWidth / window.innerHeight, 0.1, 1000);
+      camera.position.z = 28;
+
+      const renderer = new THREE.WebGLRenderer({ alpha: true, antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio, 2));
+      container.appendChild(renderer.domElement);
+
+      const ambientLight = new THREE.AmbientLight(0xffffff, 0.85);
+      scene.add(ambientLight);
+
+      const dirLight1 = new THREE.DirectionalLight(0xe0f2fe, 2.5);
+      dirLight1.position.set(20, 25, 20);
+      scene.add(dirLight1);
+
+      const dirLight2 = new THREE.DirectionalLight(0xa5b4fc, 1.8);
+      dirLight2.position.set(-20, -15, 10);
+      scene.add(dirLight2);
+
+      const particleCount = 260;
+      const particleGeom = new THREE.BufferGeometry();
+      const posArray = new Float32Array(particleCount * 3);
+      for (let i = 0; i < particleCount * 3; i += 3) {
+        posArray[i] = (Math.random() - 0.5) * 65;
+        posArray[i + 1] = (Math.random() - 0.5) * 50;
+        posArray[i + 2] = (Math.random() - 0.5) * 40;
+      }
+      particleGeom.setAttribute('position', new THREE.BufferAttribute(posArray, 3));
+
+      const particleMat = new THREE.PointsMaterial({
+        color: 0xe2e8f0,
+        size: 0.35,
+        transparent: true,
+        opacity: 0.65,
+        blending: THREE.AdditiveBlending
+      });
+      const particles = new THREE.Points(particleGeom, particleMat);
+      scene.add(particles);
+
+      const group = new THREE.Group();
+      scene.add(group);
+
+      const silverMaterial = new THREE.MeshPhongMaterial({
+        color: 0xf8fafc,
+        emissive: 0x0f172a,
+        specular: 0xffffff,
+        shininess: 90,
+        transparent: true,
+        opacity: 0.6,
+        wireframe: true
+      });
+
+      const sphereGeom = new THREE.IcosahedronGeometry(7, 2);
+      const mainMesh = new THREE.Mesh(sphereGeom, silverMaterial);
+      group.add(mainMesh);
+
+      const satellites = [];
+      for (let i = 0; i < 5; i++) {
+        const satGeom = new THREE.TetrahedronGeometry(1.2 + Math.random() * 0.8);
+        const satMesh = new THREE.Mesh(satGeom, silverMaterial);
+        const angle = (i / 5) * Math.PI * 2;
+        const radius = 13 + Math.random() * 3;
+        satMesh.position.set(Math.cos(angle) * radius, Math.sin(angle) * 4, Math.sin(angle) * radius * 0.5);
+        satMesh.userData = { speed: 0.008 + Math.random() * 0.008, angle: angle, r: radius };
+        group.add(satMesh);
+        satellites.push(satMesh);
+      }
+
+      let mouseX = 0, mouseY = 0, targetX = 0, targetY = 0;
+      window.addEventListener('mousemove', (e) => {
+        mouseX = (e.clientX / window.innerWidth) * 2 - 1;
+        mouseY = -(e.clientY / window.innerHeight) * 2 + 1;
+      }, { passive: true });
+
+      window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      });
+
+      let clock = new THREE.Clock();
+      function animate() {
+        requestAnimationFrame(animate);
+        const t = clock.getElapsedTime();
+
+        targetX += (mouseX - targetX) * 0.04;
+        targetY += (mouseY - targetY) * 0.04;
+
+        group.rotation.y = t * 0.18 + targetX * 0.5;
+        group.rotation.x = Math.sin(t * 0.12) * 0.15 - targetY * 0.3;
+
+        satellites.forEach(sat => {
+          sat.userData.angle += sat.userData.speed;
+          sat.position.x = Math.cos(sat.userData.angle) * sat.userData.r;
+          sat.position.y = Math.sin(sat.userData.angle * 1.5) * 3;
+        });
+
+        particles.rotation.y = -t * 0.03;
+        renderer.render(scene, camera);
+      }
+      animate();
+    })();
+  </script>
+</body>
+
+```
+})();
+
+</div>
+<!-- STITCH_THREEJS_END:ANIMATION_8 -->
+</body>
+</html>
